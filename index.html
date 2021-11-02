@@ -3,10 +3,84 @@
     <head>
         <meta charset="utf-8">
         <title>Assignment 9</title>
-        <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="crossorigin="anonymous"></script>
+        <script type="text/javascript" src="trackList.json"></script>
     </head>
     <body>
-        <script language="javascript">
-        </script>
+    <script language="javascript">
+        $.getJSON( "https://roneal22.github.io/JaSONsBlackClouds/trackList.json", 
+        //Part 2
+        function(JString) {
+            data = JSON.stringify(JString);
+            document.getElementById("stringified").innerHTML = data + "<br><br>";
+            usrFriendly(JString);
+        })
+          
+        //Part 3
+        function usrFriendly(JString){
+            HTMLstring = ""
+            JString.forEach(function(song){
+                genreString = song.genre[0]
+                if(song.genre.length > 1){
+                    for (i = 1; i < song.genre.length; i++)
+                    {
+                        genreString += ",&nbsp;"+song.genre[i]
+                    }
+                      
+                  }
+                  HTMLstring += "<p id='song'>" + song.title + "<br>Artist: " + song.artist + "<br>Genre: " + genreString + "<br>Release Year: " + song.year + "<br></p>"
+              })
+              document.getElementById("userList").innerHTML += HTMLstring
+          }
+          
+        function genreSelect(){
+        $.getJSON( "https://roneal22.github.io/JaSONsBlackClouds/trackList.json", 
+            function(JString){ //Part 2
+            genre = document.getElementById("genres").value;
+            document.getElementById("filtering").innerHTML = ""
+            JString.forEach(function(song){
+                  HTMLstring = "";
+                  for (i = 0; i < song.genre.length; i++)
+                  {
+                      if (song.genre[i] == genre)
+                      {
+                          HTMLstring += "<p id='song'>" + song.title + "<br>Artist: " + song.artist + "<br>Release Year: " + song.year + "<br></p>"
+                          document.getElementById("filtering").innerHTML += HTMLstring
+                      }
+                  }                     
+              })
+          })
+          }
+
+    </script>
+    
+    <header>
+        <h1>The Black Clouds Setlist</h1>
+    </header>
+
+        <h2>Stringified JSON:</h2>
+        <div id = "stringified"></div>
+        <br>
+        <br>
+
+        <h2>Friendly Display:</h2>
+        <div id = "userList"></div>
+        <br>
+        <br>
+
+        <h2>Pick a Genre!</h2><br>
+        select a genre to filter songs>
+        <br>
+        <br>
+
+        <form>
+        <label for = "genres">Please select your desired genre: </label> 
+        <select name = "genres" id = "genres" onchange="genreSelect()">
+            <option value = "Pop">Pop</option>
+            <option value = "Rock">Rock</option>
+            <option value = "Soul">Soul</option>
+        </select>
+        </form>
+
+        <div id = "filtering"><div>
     </body>
 </html>

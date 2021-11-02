@@ -2,61 +2,61 @@
     {
         "title": "Have You Ever Seen The Rain",
         "artist": "Creedence Clearwater Revival",
-        "year": 1970,
-        "genre": ["Rock"]
+        "genre": ["Rock"],
+        "year": 1970
     },
     {
         "title": "Rainy Day Man",
         "artist": "Bonnie Raitt",
-        "year": 1974,
-        "genre": ["Soul"]
+        "genre": ["Soul"],
+        "year": 1974
     },
     {
         "title": "I Wish It Would Rain",
         "artist": "The Temptations",
-        "year": 1967,
-        "genre": ["Soul","Blues"]
+        "genre": ["Soul","Blues"],
+        "year": 1967
     },
     {
         "title": "No Rain",
         "artist": "Blind Melon",
-        "year": 1993,
-        "genre": ["Rock","Alternative"]
+        "genre": ["Rock","Alternative"],
+        "year": 1993
     },
     {
         "title": "Fire and Rain",
         "artist": "James Taylor",
-        "year": 1970,
-        "genre": ["Rock","Folk"]
+        "genre": ["Rock","Folk"],
+        "year": 1970
     },
     {
         "title": "Purple Rain",
         "artist": "Prince",
-        "year": 1984,
-        "genre": ["Pop","Rock"]
+        "genre": ["Pop","Rock"],
+        "year": 1984
     },
     {
         "title": "Rain On Me",
         "artist": "Lady Gaga & Ariana Grande",
-        "year": 2020,
-        "genre": ["Pop"]
+        "genre": ["Pop"],
+        "year": 2020
     },
     {
         "title": "Set Fire to the Rain",
         "artist": "Adele",
-        "year": 2011,
-        "genre": ["Pop"]
+        "genre": ["Pop"],
+        "year": 2011
     },
     {
         "title": "The Rain Song",
         "artist": "Led Zeppelin",
-        "year": 1973,
-        "genre": ["Rock"]
+        "genre": ["Rock"],
+        "year": 1973
     },
     {
         "title": "It's Raining Men",
         "artist": "The Weather Girls",
-        "year": 1982,
-        "genre": ["Disco"]
+        "genre": ["Disco"],
+        "year": 1982
     }
 ]
